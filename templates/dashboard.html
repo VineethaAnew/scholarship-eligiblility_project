@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard">
+
+    <!-- Top bar with title + 3-dots menu -->
+    <div class="dashboard-header">
+        <h2>Dashboard</h2>
+
+        <div class="menu-wrapper">
+            <button class="menu-button" id="menu-button" aria-label="Menu">
+                &#8942;  <!-- 3 vertical dots -->
+            </button>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <button class="menu-item" id="menu-profile">Profile</button>
+                <button class="menu-item" id="menu-settings">Settings</button>
+                <button class="menu-item" id="menu-applied">Scholarship Applied</button>
+                <button class="menu-item menu-danger" id="menu-logout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <p>Welcome to your scholarship dashboard.</p>
+
+    <!-- AVAILABLE SCHOLARSHIPS SECTION -->
+    <h3>Available Scholarships</h3>
+    <div class="scholarship-list">
+
+        <div class="scholarship-card" onclick="window.location.href='/apply/';">
+            <h4>Merit Excellence Scholarship</h4>
+            <p class="scholarship-category">Category: Academic Merit</p>
+            <p class="scholarship-desc">
+                For students with high academic performance (e.g., 75% and above).
+            </p>
+            <button class="scholarship-apply-btn">Apply</button>
+        </div>
+
+        <div class="scholarship-card" onclick="window.location.href='/apply/';">
+            <h4>Need-Based Support Scholarship</h4>
+            <p class="scholarship-category">Category: Financial Need</p>
+            <p class="scholarship-desc">
+                For students from economically weaker backgrounds needing financial support.
+            </p>
+            <button class="scholarship-apply-btn">Apply</button>
+        </div>
+
+        <div class="scholarship-card" onclick="window.location.href='/apply/';">
+            <h4>Sports Achievement Scholarship</h4>
+            <p class="scholarship-category">Category: Sports</p>
+            <p class="scholarship-desc">
+                For students who have represented school/college in sports events.
+            </p>
+            <button class="scholarship-apply-btn">Apply</button>
+        </div>
+
+        <div class="scholarship-card" onclick="window.location.href='/apply/';">
+            <h4>Women in STEM Scholarship</h4>
+            <p class="scholarship-category">Category: STEM / Women</p>
+            <p class="scholarship-desc">
+                For women pursuing degrees in science, technology, engineering, or maths.
+            </p>
+            <button class="scholarship-apply-btn">Apply</button>
+        </div>
+
+    </div>
+
+   
+</div>
+{% endblock %}

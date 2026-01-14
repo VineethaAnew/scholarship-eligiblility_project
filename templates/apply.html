@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="apply-form">
+    
+    <h2>Scholarship Application</h2>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="college" placeholder="College">
+    <input type="text" id="parents_name" placeholder="Parents' Name">
+    <input type="text" id="phone" placeholder="Phone">
+    <textarea id="address" placeholder="Address"></textarea>
+    <input type="number" id="marks" placeholder="Marks (0-100)">
+
+    <h3>Bank Details (enabled only if marks ≥ 75)</h3>
+    <input type="text" id="bank_account_number" placeholder="Bank Account Number" disabled>
+    <input type="text" id="bank_ifsc" placeholder="IFSC Code" disabled>
+    <input type="text" id="bank_name" placeholder="Bank Name" disabled>
+
+    <button id="submit-application" disabled>Submit Application</button>
+    <p id="apply-message"></p>
+</div>
+{% endblock %}

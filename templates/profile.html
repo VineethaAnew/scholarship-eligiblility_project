@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="profile-container">
+    
+    <div class="profile-header">
+        <h2>Your Profile</h2>
+
+    </div>
+
+    <!-- Profile Picture -->
+    <div class="profile-picture-section">
+    <div class="profile-pic-wrapper" id="profile-pic-wrapper">
+        <img
+            id="profile-pic-preview"
+            src="/static/img/default-user.png"
+            alt="Profile Picture"
+            class="profile-pic"
+        />
+        <div class="profile-pic-overlay">
+            <span>Change</span>
+        </div>
+    </div>
+
+    <!-- hidden file input -->
+    <input
+        type="file"
+        id="profile-pic-input"
+        accept="image/*"
+        style="display: none;"
+    >
+    <p class="profile-pic-hint">Tap the circle to upload a picture</p>
+    </div>
+
+
+    <!-- User Info -->
+    <div class="profile-details">
+
+        <label>Username</label>
+        <input type="text" id="profile-username" disabled>
+
+        <label>Email</label>
+        <input type="email" id="profile-email">
+
+        <label>Phone</label>
+        <input type="text" id="profile-phone">
+
+        <label>Age</label>
+        <input type="number" id="profile-age">
+
+        <label>Date of Birth (Optional)</label>
+        <input type="date" id="profile-dob">
+
+        <label>Gender</label>
+        <select id="profile-gender">
+            <option value="">Select Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+        </select>
+
+        <button id="save-profile-btn" class="green-btn">Save Changes</button>
+        <p id="profile-message"></p>
+    </div>
+</div>
+{% endblock %}

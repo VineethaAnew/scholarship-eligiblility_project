@@ -1,0 +1,308 @@
+body {
+     background-color: #f9f4e8; /* light cream */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.auth-container, .apply-form, .applied-page, .dashboard {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #e2d7c3;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #d4c8b0; /* soft brownish cream border */
+    border-radius: 6px;        /* modern rounded shape */
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #8b6f47; 
+    outline: none;
+    box-shadow: 0 0 4px rgba(139, 111, 71, 0.4); /* subtle glow */
+}
+
+
+.button-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* yellow buttons with black text */
+.yellow-btn {
+    flex: 1;
+    background-color: #ffd600;
+    color: #000;
+    border: none;
+    padding: 8px 0;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.yellow-btn:hover {
+    background-color: #ffca28;
+}
+
+.link-btn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #1976d2;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.dashboard {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* 3-dots menu */
+.menu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.menu-button:hover {
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.menu-dropdown {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 180px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: none; /* hidden by default */
+    z-index: 1000;
+}
+
+.menu-dropdown.show {
+    display: block;
+}
+
+.menu-item {
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: #f3f3f3;
+}
+
+.menu-danger {
+    color: #b00020;
+}
+
+
+input, textarea, button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+
+}
+.scholarship-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0 24px;
+}
+
+.scholarship-card {
+    background-color: #fff;
+    border: 2px solid #e2d7c3;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+.scholarship-card h4 {
+    margin: 0 0 4px;
+}
+
+.scholarship-category {
+    font-size: 13px;
+    color: #555;
+    margin: 0 0 6px;
+}
+
+.scholarship-desc {
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+.scholarship-apply-btn {
+    padding: 8px 12px;
+    background-color: #2e7d32; /* elegant green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ensure click on button doesn’t break click on card */
+.scholarship-apply-btn:hover {
+    background-color: #1b5e20;
+}
+.applied-page {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.applied-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.profile-container {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #e2d7c3;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    background: #d8c9a6;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-picture-section {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.profile-pic-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e2d7c3;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    background-color: #f1e6d4;
+}
+
+.profile-pic-wrapper:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* overlay text on hover */
+.profile-pic-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.profile-pic-wrapper:hover .profile-pic-overlay {
+    opacity: 1;
+}
+
+.profile-pic-hint {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #7a6a4f;
+}
+
+.green-btn {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.green-btn:hover {
+    background-color: #1b5e20;
+}

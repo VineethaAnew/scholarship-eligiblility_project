@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarship Portal</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Scholarship Eligibility Portal</h1>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+<script>
+function getCSRFToken() {
+    let csrfToken = null;
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+        if (cookie.trim().startsWith('csrftoken=')) {
+            csrfToken = cookie.trim().substring('csrftoken='.length);
+        }
+    }
+    return csrfToken;
+}
+</script>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
